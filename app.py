@@ -10,20 +10,24 @@ def index() :
 
 @app.route('/feed', methods=['POST'])
 def feed() :
-    pet.feed()
-    pet.timepassed()
-    return render_template('index.html', pet=pet)
+    message = pet.feed()
+    message2 = pet.timepassed()
+    if message == message2 :
+        message2 = ""
+    return render_template('index.html', pet=pet, message=message, message2= message2)
 
 @app.route('/play', methods=['POST'])
 def play() :
-    pet.play()
-    pet.timepassed()
-    return render_template('index.html', pet=pet)
+    message = pet.play()
+    message2 = pet.timepassed()
+    if message == message2 :
+        message2 = ""
+    return render_template('index.html', pet=pet, message=message, message2= message2)
 
 @app.route('/wait', methods=['POST'])
 def wait() :
-    pet.timepassed()
-    return render_template('index.html', pet=pet)
+    message = pet.timepassed()
+    return render_template('index.html', pet=pet, message=message)
 
 if __name__ == '__main__' :
     app.run()
