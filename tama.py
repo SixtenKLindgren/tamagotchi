@@ -30,22 +30,3 @@ class Tamagochi:
         else :
             self.happiness += 20
             print(f"{self.name} enjoyed playing!")
-
-pet = Tamagochi("tama") 
-
-while True :
-    while True :
-        try :
-            choice = int(input("[1] Feed, [2] Play, [3] Wait    "))
-            break
-        except :
-            print("invalid choice")
-    if choice == 1 :
-        pet.feed()
-    elif choice == 2 :
-        pet.play()
-    elif choice == 3 :
-        pass
-    alive = pet.timepassed()
-    if alive == "dead" :
-        break
