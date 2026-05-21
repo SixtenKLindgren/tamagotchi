@@ -10,23 +10,21 @@ class Tamagochi:
         self.hunger -= 10
         self.happiness -= 10
         if self.hunger <= 0 :
-            print(f"{self.name} dies of starvation.")
-            return "dead"
+            return f"{self.name} dies of starvation."
         elif self.happiness <= 0 :
-            print(f"{self.name} dies of boredom")
-            return "dead"
+            return f"{self.name} dies of boredom"
         else :
-            print(f"{self.name} aged!")
+            return f"{self.name} aged!"
     def feed(self) :
         if self.hunger > 80 :
-            print(f"{self.name} is not hungry right now.")
+            return f"{self.name} is not hungry right now."
         else :
             self.hunger += 20
-            print(f"{self.name} ate.")
+            return f"{self.name} ate."
 
     def play(self) :
         if self.happiness > 80 :
-            print(f"{self.name} is not in the mood to play.")
+            return f"{self.name} is not in the mood to play."
         else :
             self.happiness += 20
-            print(f"{self.name} enjoyed playing!")
+            return f"{self.name} enjoyed playing!"

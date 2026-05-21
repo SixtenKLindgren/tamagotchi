@@ -6,6 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <p>asdawdawd</p>
+    <h1> {{ pet.name }}</h1>
+    <p>age: {{ pet.age }}</p>
+    <p>hunger: {{ pet.hunger }}</p>
+    <p>happiness: {{ pet.happiness }}</p>
+
+    <form method="POST" action="/feed"><button>Feed</button></form>
+    <form method="POST" action="/play"><button>Play</button></form>
+    <form method="POST" action="/wait"><button>Wait</button></form>
 </body>
 </html>
